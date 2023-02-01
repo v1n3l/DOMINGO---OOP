@@ -1,24 +1,33 @@
-<?php
-    class Person {
-        // Properties
-        // Data Members
-        private $name;
-        private $description;
-        private $price;
-        private $srp;
+<?php 
+    require_once "products.php";
 
-        // Methods
-        // Functionality
-        function sayHello() {
-            echo "Hello!<br>";
-        }
+    class Medicine extends Products {
+       private $dose;
+       private $type;
+       private $expirationDate;
 
-        function sayName() {
-            echo "Hello I am " . $this->name . "!<br>";
-        }
-
-        function setExpirationDate($name) {
-            $this->name = $name;
-        }
+       function setDose(){
+        $this->dose = $dose;
+       }
+       function setType(){
+        $this->type = $type
+       }
+       function setExpirationDate(){
+        $this->expirationDate = $expirationDate
+       }
+       
+       function getDose(){
+        echo $this->dose;
+       }
+       function getType(){
+        echo $this->type;
+       }
+       function getExpirationDate(){
+        echo $this->expirationDate;
+       }
+       
+       function computeSRP() {
+        echo ($this->price * 2);
+       } 
     }
 ?>
